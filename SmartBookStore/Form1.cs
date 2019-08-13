@@ -16,5 +16,12 @@ namespace SmartBookStore
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StartPageClient startPage = new StartPageClient();
+            startPage.Show();
+            Hide();
+        }
     }
 }
