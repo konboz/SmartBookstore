@@ -13,7 +13,7 @@ namespace SmartBookStore
 {
     public partial class StartPageClient : Form
     {
-        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookStoreDb.mdb";
+        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookstoreDb.mdb";
         OleDbConnection connection;
         public StartPageClient()
         {
@@ -32,19 +32,35 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            connection.Open();
+            
+            string query;
             if (radioButton1.Checked)
             {
-                string query = "SELECT Title FROM Books WHERE Title LIKE(\"" + textBox1 + "\")";
-                OleDbCommand command = new OleDbCommand(query, connection);
-                OleDbDataReader reader = command.ExecuteReader();
+                query = "SELECT * FROM Books WHERE Author LIKE(\"" + textBox1.Text + "\")";
             }
-            else if (radioButton2.Checked)
+            else
             {
-                string query = "SELECT Title FROM Books WHERE Author LIKE(\"" + textBox1 + "\")";
-                OleDbCommand command = new OleDbCommand(query, connection);
-                OleDbDataReader reader = command.ExecuteReader();
+                query = "SELECT * FROM Books WHERE Title LIKE(\"" + textBox1.Text + "\")";
             }
+            var book = new Book();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            connection.Open();
+            OleDbDataReader reader = command.ExecuteReader();
+             var results = new object[10];
+            while (reader.Read())
+            {
+                book.Title = reader.GetValue(1).ToString();
+                book.Author = reader.GetValue(2).ToString();
+                book.Price = decimal.Parse(reader.GetValue(3).ToString());
+                book.Paperback = reader.GetValue(4).ToString();
+                book.Year = int.Parse(reader.GetValue(5).ToString());
+            }
+            reader.Close();
+            connection.Close();
+            
+            //var result = new BookResults(reader);
+            //result.Show();
+            //Hide();
         }
 
         private void StartPageClient_Load(object sender, EventArgs e)
