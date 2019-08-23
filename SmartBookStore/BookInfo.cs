@@ -26,7 +26,9 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var order = new Order(book);
+            order.Show();
+            Hide();
         }
     }
 }

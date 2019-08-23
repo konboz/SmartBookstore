@@ -12,9 +12,25 @@ namespace SmartBookStore
 {
     public partial class Order : Form
     {
-        public Order()
+        public Order(Book book)
         {
             InitializeComponent();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                groupBox2.Visible = true;
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                groupBox2.Visible = false;
+            }
         }
     }
 }
