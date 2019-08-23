@@ -32,5 +32,13 @@ namespace SmartBookStore
                 groupBox2.Visible = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Η παραγγελία ολοκληρώθηκε!");
+            var progress = new OrderProgress();
+            Hide();
+            progress.Show();
+        }
     }
 }
