@@ -13,13 +13,56 @@ namespace SmartBookStore
 {
     public partial class BookResults : Form
     {
-        public BookResults(OleDbDataReader reader)
+        List<Book> results = new List<Book>();
+        public BookResults(List<Book> results)
         {
             InitializeComponent();
-            while (reader.Read())
+            this.results = results;
+            var titles = new List<TextBox> { textBox1, textBox3, textBox5, textBox7, textBox9};
+            var authors = new List<TextBox> { textBox2, textBox4, textBox6, textBox8, textBox10 };
+            int i = 0;
+
+            foreach (Book item in results)
             {
-                textBox1.Text = reader[0].ToString();
+                titles[i].Text = item.Title;
+                authors[i].Text = item.Author;
+                i++;  
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var book = new BookInfo(results[0]);
+            book.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var book = new BookInfo(results[1]);
+            book.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var book = new BookInfo(results[2]);
+            book.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var book = new BookInfo(results[3]);
+            book.Show();
+            Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var book = new BookInfo(results[4]);
+            book.Show();
+            Hide();
         }
     }
 }

@@ -42,25 +42,27 @@ namespace SmartBookStore
             {
                 query = "SELECT * FROM Books WHERE Title LIKE(\"" + textBox1.Text + "\")";
             }
-            var book = new Book();
+
             OleDbCommand command = new OleDbCommand(query, connection);
             connection.Open();
             OleDbDataReader reader = command.ExecuteReader();
-             var results = new object[10];
+             var results = new List<Book>();
             while (reader.Read())
             {
+                var book = new Book();
                 book.Title = reader.GetValue(1).ToString();
                 book.Author = reader.GetValue(2).ToString();
-                book.Price = decimal.Parse(reader.GetValue(3).ToString());
+                book.Year = int.Parse(reader.GetValue(3).ToString());
                 book.Paperback = reader.GetValue(4).ToString();
-                book.Year = int.Parse(reader.GetValue(5).ToString());
+                book.Price = decimal.Parse(reader.GetValue(5).ToString());
+                results.Add(book);
             }
             reader.Close();
             connection.Close();
-            
-            //var result = new BookResults(reader);
-            //result.Show();
-            //Hide();
+
+            var result = new BookResults(results);
+            result.Show();
+            Hide();
         }
 
         private void StartPageClient_Load(object sender, EventArgs e)
