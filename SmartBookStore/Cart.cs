@@ -27,6 +27,29 @@ namespace SmartBookStore
                 dt.Rows.Add(book.Title, book.Author, book.Price.ToString());
             }
             dataGridView1.DataSource = dt;
+
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Name = "Διαγραφή";
+            deleteButtonColumn.Text = "Διαγραφή";
+            int columnIndex = 3;
+            if (dataGridView1.Columns["Διαγραφή"] == null)
+            {
+                dataGridView1.Columns.Insert(columnIndex, deleteButtonColumn);
+            }
+
+            dataGridView1.CellClick += dataGridView1_CellClick;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["Διαγραφή"].Index)
+            {
+                var grid = sender as DataGridView;
+                var row = grid.CurrentRow.Index;
+                var title = dataGridView1.Rows[row].Cells[1].FormattedValue.ToString();
+                Utilities.BookDelete(title);
+                Refresh();//refresh doesn't work
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
