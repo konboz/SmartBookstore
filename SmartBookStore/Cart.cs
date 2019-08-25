@@ -17,6 +17,12 @@ namespace SmartBookStore
         {
             InitializeComponent();
             this.form = form;
+            LoadGrid();
+            dataGridView1.CellClick += dataGridView1_CellClick;
+        }
+
+        private void LoadGrid()
+        {
             DataTable dt = new DataTable();
             dt.Columns.Add("Τίτλος", typeof(string));
             dt.Columns.Add("Συγγραφέας", typeof(string));
@@ -36,10 +42,7 @@ namespace SmartBookStore
             {
                 dataGridView1.Columns.Insert(columnIndex, deleteButtonColumn);
             }
-
-            dataGridView1.CellClick += dataGridView1_CellClick;
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView1.Columns["Διαγραφή"].Index)
@@ -48,7 +51,7 @@ namespace SmartBookStore
                 var row = grid.CurrentRow.Index;
                 var title = dataGridView1.Rows[row].Cells[1].FormattedValue.ToString();
                 Utilities.BookDelete(title);
-                Refresh();//refresh doesn't work
+                LoadGrid();
             }
         }
 
@@ -66,6 +69,11 @@ namespace SmartBookStore
         {
             form.Show();
             Hide();
+        }
+
+        private void Cart_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
