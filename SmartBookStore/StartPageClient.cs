@@ -60,7 +60,7 @@ namespace SmartBookStore
             reader.Close();
             connection.Close();
 
-            var result = new BookResults(results);
+            var result = new BookResults(this, results);
             result.Show();
             Hide();
         }

@@ -21,6 +21,8 @@ namespace SmartBookStore
         {
             StartPageClient startPage = new StartPageClient();
             startPage.Show();
+            var newCart = new CartItems();
+            GlobalVariables.cart = newCart;
             Hide();
         }
     }

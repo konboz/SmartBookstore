@@ -12,11 +12,13 @@ namespace SmartBookStore
 {
     public partial class BookInfo : Form
     {
+        public Form form;
         Book book = new Book();
-        public BookInfo(Book book)
+        public BookInfo(Form form, Book book)
         {
             InitializeComponent();
             this.book = book;
+            this.form = form;
             textBox1.Text = book.Title;
             textBox2.Text = book.Author;
             textBox3.Text = book.Year.ToString();
@@ -26,8 +28,21 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var order = new Order(book);
-            order.Show();
+            Utilities.BookAdd(book);
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var cart = new Cart(this);
+            cart.Show();
             Hide();
         }
     }

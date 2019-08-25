@@ -12,9 +12,11 @@ namespace SmartBookStore
 {
     public partial class Order : Form
     {
-        public Order(Book book)
+        public Form form;
+        public Order(Form form, Book book)
         {
             InitializeComponent();
+            this.form = form;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -36,9 +38,15 @@ namespace SmartBookStore
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Η παραγγελία ολοκληρώθηκε!");
-            var progress = new OrderProgress();
+            var progress = new OrderProgress(this);
             Hide();
             progress.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
         }
     }
 }
