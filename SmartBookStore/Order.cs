@@ -13,10 +13,11 @@ namespace SmartBookStore
     public partial class Order : Form
     {
         public Form form;
-        public Order(Form form, Book book)
+        public Order(Form form, decimal sum)
         {
             InitializeComponent();
             this.form = form;
+            label12.Text = sum.ToString() + "ευρώ";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

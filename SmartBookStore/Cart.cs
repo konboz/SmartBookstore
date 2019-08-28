@@ -13,12 +13,14 @@ namespace SmartBookStore
     public partial class Cart : Form
     {
         Form form;
+        decimal sum;
         public Cart(Form form)
         {
             InitializeComponent();
             this.form = form;
             LoadGrid();
             dataGridView1.CellClick += dataGridView1_CellClick;
+            label2.Text = sum.ToString() + "ευρώ";
         }
 
         private void LoadGrid()
@@ -27,10 +29,11 @@ namespace SmartBookStore
             dt.Columns.Add("Τίτλος", typeof(string));
             dt.Columns.Add("Συγγραφέας", typeof(string));
             dt.Columns.Add("Τιμή", typeof(string));
-
+            sum = 0;
             foreach (var book in GlobalVariables.cart.Books)
             {
                 dt.Rows.Add(book.Title, book.Author, book.Price.ToString());
+                sum += book.Price;
             }
             dataGridView1.DataSource = dt;
 
@@ -52,12 +55,15 @@ namespace SmartBookStore
                 var title = dataGridView1.Rows[row].Cells[1].FormattedValue.ToString();
                 Utilities.BookDelete(title);
                 LoadGrid();
+                label2.Text = sum.ToString() + "ευρώ";
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            var order = new Order(this, sum);
+            order.Show();
+            Hide();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

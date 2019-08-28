@@ -28,9 +28,9 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Utilities.BookAdd(book);
-            
-            
+            var cart = new Cart(this);
+            cart.Show();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,9 +41,7 @@ namespace SmartBookStore
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var cart = new Cart(this);
-            cart.Show();
-            Hide();
+            Utilities.BookAdd(book);
         }
     }
 }
