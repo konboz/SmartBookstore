@@ -20,6 +20,8 @@ namespace SmartBookStore
         private void button3_Click(object sender, EventArgs e)
         {
             Library library = new Library(this);
+            library.Show();
+            Hide();
         }
     }
 }
