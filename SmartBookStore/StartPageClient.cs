@@ -12,16 +12,32 @@ namespace SmartBookStore
 {
     public partial class StartpageClient : Form
     {
+        Bitmap lightsOut = new Bitmap("bookstore-2.jpg");
+        Bitmap lightsOn = new Bitmap("bookstore.jpg");
         public StartpageClient()
         {
             InitializeComponent();
-        }
+            this.BackgroundImage = lightsOn;
+
+        }    
 
         private void button3_Click(object sender, EventArgs e)
         {
             Library library = new Library(this);
             library.Show();
             Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (this.BackgroundImage == lightsOn)
+            {
+                this.BackgroundImage = lightsOut;
+            }
+            else
+            {
+                this.BackgroundImage = lightsOn;
+            }
         }
     }
 }

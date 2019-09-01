@@ -13,6 +13,9 @@ namespace SmartBookStore
 {
     public partial class Library : Form
     {
+        Bitmap lightsOut = new Bitmap("library-3.jpg");
+        Bitmap lightsOn = new Bitmap("library.jpg");
+        Bitmap lightsDown = new Bitmap("library-2.jpg");
         public Form form;
         string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookstoreDb.mdb";
         OleDbConnection connection;
@@ -20,6 +23,7 @@ namespace SmartBookStore
         {
             InitializeComponent();
             this.form = form;
+            checkBox1.Checked = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -81,6 +85,32 @@ namespace SmartBookStore
         {
             form.Show();
             Hide();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+                this.BackgroundImage = lightsOn;
+            }
+            else if (!checkBox1.Checked)
+            {
+                this.BackgroundImage = lightsOut;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Checked = false;
+                this.BackgroundImage = lightsDown;
+            }
+            else if (!checkBox2.Checked)
+            {
+                this.BackgroundImage = lightsOut;
+            }
         }
     }
 }

@@ -35,7 +35,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -100,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(219, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 16);
@@ -120,6 +124,46 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.checkBox1.ForeColor = System.Drawing.Color.Gold;
+            this.checkBox1.Location = new System.Drawing.Point(18, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(52, 19);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Όλα";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox2.Location = new System.Drawing.Point(237, 86);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(142, 78);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Φώτα";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.checkBox2.ForeColor = System.Drawing.Color.Gold;
+            this.checkBox2.Location = new System.Drawing.Point(18, 46);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(113, 19);
+            this.checkBox2.TabIndex = 22;
+            this.checkBox2.Text = "Κάτω επίπεδο";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +171,7 @@
             this.BackgroundImage = global::SmartBookStore.Properties.Resources.library;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(943, 483);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -138,6 +183,8 @@
             this.Load += new System.EventHandler(this.StartPageClient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +199,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
