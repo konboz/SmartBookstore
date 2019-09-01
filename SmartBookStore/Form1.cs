@@ -19,7 +19,7 @@ namespace SmartBookStore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StartPageClient startPage = new StartPageClient();
+            StartpageClient startPage = new StartpageClient();
             startPage.Show();
             var newCart = new CartItems();
             GlobalVariables.cart = newCart;

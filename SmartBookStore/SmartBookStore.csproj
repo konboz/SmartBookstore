@@ -93,11 +93,11 @@
     <Compile Include="Library.Designer.cs">
       <DependentUpon>Library.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartPageClient.cs">
+    <Compile Include="StartpageClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartPageClient.Designer.cs">
-      <DependentUpon>StartPageClient.cs</DependentUpon>
+    <Compile Include="StartpageClient.Designer.cs">
+      <DependentUpon>StartpageClient.cs</DependentUpon>
     </Compile>
     <Compile Include="StartPageEmployee.cs">
       <SubType>Form</SubType>
@@ -132,12 +132,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Library.resx">
       <DependentUpon>Library.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartPageClient.resx">
-      <DependentUpon>StartPageClient.cs</DependentUpon>
+    <EmbeddedResource Include="StartpageClient.resx">
+      <DependentUpon>StartpageClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartPageEmployee.resx">
       <DependentUpon>StartPageEmployee.cs</DependentUpon>
@@ -154,6 +155,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bookstore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\searchIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\library.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

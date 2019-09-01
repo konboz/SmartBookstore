@@ -13,11 +13,13 @@ namespace SmartBookStore
 {
     public partial class Library : Form
     {
+        public Form form;
         string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookstoreDb.mdb";
         OleDbConnection connection;
-        public Library()
+        public Library(Form form)
         {
             InitializeComponent();
+            this.form = form;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace SmartBookStore
             reader.Close();
             connection.Close();
 
-            var result = new BookResults(results);
+            var result = new BookResults(this, results);
             result.Show();
             Hide();
         }
