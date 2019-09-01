@@ -12,9 +12,12 @@ namespace SmartBookStore
 {
     public partial class Order : Form
     {
-        public Order(Book book)
+        public Form form;
+        public Order(Form form, decimal sum)
         {
             InitializeComponent();
+            this.form = form;
+            label12.Text = sum.ToString() + "ευρώ";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +34,20 @@ namespace SmartBookStore
             {
                 groupBox2.Visible = false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Η παραγγελία ολοκληρώθηκε!");
+            var progress = new OrderProgress(this);
+            Hide();
+            progress.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
         }
     }
 }
