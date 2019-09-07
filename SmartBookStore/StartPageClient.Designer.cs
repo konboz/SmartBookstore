@@ -69,9 +69,9 @@
             // 
             this.button4.BackgroundImage = global::SmartBookStore.Properties.Resources.lights;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(188, 12);
+            this.button4.Location = new System.Drawing.Point(197, 37);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 61);
+            this.button4.Size = new System.Drawing.Size(52, 47);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
