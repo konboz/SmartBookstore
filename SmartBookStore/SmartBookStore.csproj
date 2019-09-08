@@ -59,6 +59,12 @@
     <Compile Include="BookResults.Designer.cs">
       <DependentUpon>BookResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cafe.Designer.cs">
+      <DependentUpon>Cafe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookResults.resx">
       <DependentUpon>BookResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cafe.resx">
+      <DependentUpon>Cafe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
@@ -176,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\lights.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cafe.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

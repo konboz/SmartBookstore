@@ -39,5 +39,12 @@ namespace SmartBookStore
                 this.BackgroundImage = lightsOn;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cafe cafe = new Cafe();
+            cafe.Show();
+            Hide();
+        }
     }
 }

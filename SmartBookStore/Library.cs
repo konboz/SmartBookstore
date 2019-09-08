@@ -52,7 +52,7 @@ namespace SmartBookStore
             OleDbCommand command = new OleDbCommand(query, connection);
             connection.Open();
             OleDbDataReader reader = command.ExecuteReader();
-             var results = new List<Book>();
+            var results = new List<Book>();
             while (reader.Read())
             {
                 var book = new Book();
