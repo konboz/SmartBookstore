@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace SmartBookStore
 {
-    public partial class Cafe : Form
+    public partial class Printingarea : Form
     {
-        public Cafe()
+        public Printingarea()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Radio radio = new Radio();
-            radio.Show();
-            Hide();
         }
     }
 }

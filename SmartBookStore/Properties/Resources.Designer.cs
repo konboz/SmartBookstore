@@ -103,6 +103,26 @@ namespace SmartBookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cashdesk {
+            get {
+                object obj = ResourceManager.GetObject("cashdesk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emplbookstore {
+            get {
+                object obj = ResourceManager.GetObject("emplbookstore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library {
             get {
                 object obj = ResourceManager.GetObject("library", resourceCulture);
@@ -116,6 +136,26 @@ namespace SmartBookStore.Properties {
         internal static System.Drawing.Bitmap lights {
             get {
                 object obj = ResourceManager.GetObject("lights", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printingarea2 {
+            get {
+                object obj = ResourceManager.GetObject("printingarea2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap radio {
+            get {
+                object obj = ResourceManager.GetObject("radio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

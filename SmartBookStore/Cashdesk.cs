@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace SmartBookStore
 {
-    public partial class Cafe : Form
+    public partial class Cashdesk : Form
     {
-        public Cafe()
+        public Cashdesk()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Radio radio = new Radio();
-            radio.Show();
-            Hide();
         }
     }
 }
