@@ -12,9 +12,24 @@ namespace SmartBookStore
 {
     public partial class Cashdesk : Form
     {
-        public Cashdesk()
+        public Form form;
+        public Cashdesk(Form form)
         {
             InitializeComponent();
+            this.form = form;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Checkout check = new Checkout();
+            check.Show();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
         }
     }
 }

@@ -25,5 +25,12 @@ namespace SmartBookStore
             GlobalVariables.cart = newCart;
             Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StartPageEmployee employee = new StartPageEmployee(this);
+            employee.Show();
+            Hide();
+        }
     }
 }

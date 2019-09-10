@@ -35,10 +35,10 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Πίσω";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -86,6 +87,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Επιλογή";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // radioButton2
             // 
@@ -128,6 +130,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Φώτα";
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(7, 106);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(60, 22);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Όλα";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
@@ -138,6 +151,7 @@
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Καφετέρια";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -149,6 +163,7 @@
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Φωτοτυπικό";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -160,16 +175,7 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Χώρος βιβλίων";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(7, 106);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(60, 22);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Όλα";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // StartPageEmployee
             // 
