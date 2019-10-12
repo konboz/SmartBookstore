@@ -40,7 +40,7 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(186, 38);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(357, 160);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(284, 209);
@@ -48,7 +48,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(515, 38);
+            this.button1.Location = new System.Drawing.Point(684, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 56);
             this.button1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(515, 114);
+            this.button3.Location = new System.Drawing.Point(684, 236);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 56);
             this.button3.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(515, 191);
+            this.button4.Location = new System.Drawing.Point(684, 313);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 56);
             this.button4.TabIndex = 4;
@@ -89,6 +89,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SmartBookStore.Properties.Resources.music;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

@@ -276,5 +276,8 @@
   <ItemGroup>
     <None Include="bin\Debug\checkout.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
