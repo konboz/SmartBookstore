@@ -12,15 +12,23 @@ namespace SmartBookStore
 {
     public partial class Cafe : Form
     {
-        public Cafe()
+        public Form form;
+        public Cafe(Form form)
         {
             InitializeComponent();
+            this.form = form;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Radio radio = new Radio();
+            Radio radio = new Radio(this);
             radio.Show();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form.Show(this);
             Hide();
         }
     }

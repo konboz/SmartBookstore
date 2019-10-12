@@ -14,9 +14,11 @@ namespace SmartBookStore
     {
         Bitmap lightsOut = new Bitmap("bookstore-2.jpg");
         Bitmap lightsOn = new Bitmap("bookstore.jpg");
-        public StartpageClient()
+        public Form form;
+        public StartpageClient(Form form)
         {
             InitializeComponent();
+            this.form = form;
             this.BackgroundImage = lightsOn;
 
         }    
@@ -42,8 +44,14 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Cafe cafe = new Cafe();
+            Cafe cafe = new Cafe(this);
             cafe.Show();
+            Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            form.Show(this);
             Hide();
         }
     }

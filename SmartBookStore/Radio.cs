@@ -12,9 +12,11 @@ namespace SmartBookStore
 {
     public partial class Radio : Form
     {
-        public Radio()
+        public Form form;
+        public Radio(Form form)
         {
             InitializeComponent();
+            this.form = form;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +27,12 @@ namespace SmartBookStore
         private void button3_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = "http://media-ice.musicradio.com:80/ClassicFMMP3";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show(this);
+            Hide();
         }
     }
 }

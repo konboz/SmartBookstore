@@ -21,7 +21,7 @@ namespace SmartBookStore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Checkout check = new Checkout();
+            Checkout check = new Checkout(this);
             check.Show();
             Hide();
         }

@@ -14,7 +14,7 @@ namespace SmartBookStore
     public partial class Printingarea : Form
     {
         public Form form;
-        public Printingarea()
+        public Printingarea(Form form)
         {
             InitializeComponent();
             this.form = form;

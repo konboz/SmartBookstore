@@ -14,9 +14,11 @@ namespace SmartBookStore
 {
     public partial class Checkout : Form
     {
-        public Checkout()
+        public Form form;
+        public Checkout(Form form)
         {
             InitializeComponent();
+            this.form = form;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -145,7 +147,7 @@ namespace SmartBookStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
+            form.Show();
+            Hide();        }
     }
 }

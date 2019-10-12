@@ -19,7 +19,7 @@ namespace SmartBookStore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StartpageClient startPage = new StartpageClient();
+            StartpageClient startPage = new StartpageClient(this);
             startPage.Show();
             var newCart = new CartItems();
             GlobalVariables.cart = newCart;
@@ -31,6 +31,11 @@ namespace SmartBookStore
             StartPageEmployee employee = new StartPageEmployee(this);
             employee.Show();
             Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
