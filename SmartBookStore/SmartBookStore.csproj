@@ -211,30 +211,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\bookstore.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\searchIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\library.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\start.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\cart.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\OrderProgress\arrow.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\lights.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\cafe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="AcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -270,38 +246,49 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="bin\Debug\emplbookstore.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\cashdesk.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\printingarea2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\checkout.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\music.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\coffeOrder.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\radio.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\coffee.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\OrderProgress.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\bookResults.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\bookInfo.jpg" />
+    <Content Include="bin\Debug\Data\bookInfo.jpg" />
+    <Content Include="bin\Debug\Data\bookResults.jpg" />
+    <Content Include="bin\Debug\Data\bookstore-2.jpg" />
+    <Content Include="bin\Debug\Data\bookstore.jpg" />
+    <Content Include="bin\Debug\Data\BookstoreDb.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Data\Books\Aforismoi.jpg" />
+    <Content Include="bin\Debug\Data\Books\Doctor Sleep.jpg" />
+    <Content Include="bin\Debug\Data\Books\Manhunt.jpg" />
+    <Content Include="bin\Debug\Data\Books\Nemesis.jpg" />
+    <Content Include="bin\Debug\Data\Books\The Racketeer.jpg" />
+    <Content Include="bin\Debug\Data\Books\The Snowman.jpg" />
+    <Content Include="bin\Debug\Data\cafe.jpg" />
+    <Content Include="bin\Debug\Data\cart.JPG" />
+    <Content Include="bin\Debug\Data\cashdesk.jpg" />
+    <Content Include="bin\Debug\Data\checkout.jpg" />
+    <Content Include="bin\Debug\Data\coffee.JPG" />
+    <Content Include="bin\Debug\Data\coffeOrder.jpg" />
+    <Content Include="bin\Debug\Data\emplbookstore.jpg" />
+    <Content Include="bin\Debug\Data\emplbookstore2.jpg" />
+    <Content Include="bin\Debug\Data\emplbookstore3.jpeg" />
+    <Content Include="bin\Debug\Data\emplbookstore4.jpeg" />
+    <Content Include="bin\Debug\Data\emplbookstore5.jpeg" />
+    <Content Include="bin\Debug\Data\library-2.jpg" />
+    <Content Include="bin\Debug\Data\library-3.jpg" />
+    <Content Include="bin\Debug\Data\library.jpg" />
+    <Content Include="bin\Debug\Data\lights.JPG" />
+    <Content Include="bin\Debug\Data\menu.jpg" />
+    <Content Include="bin\Debug\Data\music.jpg" />
+    <Content Include="bin\Debug\Data\OrderProgress.jpg" />
+    <Content Include="bin\Debug\Data\OrderProgress\arrow.JPG" />
+    <Content Include="bin\Debug\Data\OrderProgress\delivered.JPG" />
+    <Content Include="bin\Debug\Data\OrderProgress\packing.JPG" />
+    <Content Include="bin\Debug\Data\OrderProgress\processing.JPG" />
+    <Content Include="bin\Debug\Data\OrderProgress\shipped.JPG" />
+    <Content Include="bin\Debug\Data\printingarea.jpg" />
+    <Content Include="bin\Debug\Data\printingarea2.jpg" />
+    <Content Include="bin\Debug\Data\radio.png" />
+    <Content Include="bin\Debug\Data\searchIcon.jpg" />
+    <Content Include="bin\Debug\Data\start.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

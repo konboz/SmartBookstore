@@ -12,8 +12,8 @@ namespace SmartBookStore
 {
     public partial class StartpageClient : Form
     {
-        Bitmap lightsOut = new Bitmap("bookstore-2.jpg");
-        Bitmap lightsOn = new Bitmap("bookstore.jpg");
+        Bitmap lightsOut = new Bitmap("Data\bookstore-2.jpg");
+        Bitmap lightsOn = new Bitmap("Data\bookstore.jpg");
         public Form form;
         public StartpageClient(Form form)
         {
