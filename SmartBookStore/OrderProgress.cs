@@ -22,10 +22,9 @@ namespace SmartBookStore
             InitializeComponent();
             pictureBox1.ImageLocation = "Data/OrderProgress/processing.jpg";
             pictureBox3.ImageLocation = "Data/OrderProgress/packing.jpg";
-            pictureBox5.ImageLocation = "Data/OrderProgress/shipped.jpg";
-            pictureBox7.ImageLocation = "Data/OrderProgress/delivered.jpg";
-            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7};
-            var labels = new List<Label> {label2, label3, label4, label5};
+            pictureBox5.ImageLocation = "Data/OrderProgress/complete.png";
+            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5};
+            var labels = new List<Label> {label2, label3, label4};
             this.pictures = pictures;
             this.labels = labels;
             this.form = form;
@@ -41,10 +40,10 @@ namespace SmartBookStore
             }
             i += 2;
             j++;
-            if (i > 6)
+            if (i > 4)
             {
                 timer1.Stop();
-                MessageBox.Show("Η παραγγελία σας παραδόθηκε επιτυχώς!");
+                MessageBox.Show("Η παραγγελία σας είναι έτοιμη για παραλαβή από το ταμείο!");
             }
         }
 
