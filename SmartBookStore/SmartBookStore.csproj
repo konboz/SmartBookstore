@@ -252,9 +252,6 @@
     <Content Include="bin\Debug\Data\bookResults.jpg" />
     <Content Include="bin\Debug\Data\bookstore-2.jpg" />
     <Content Include="bin\Debug\Data\bookstore.jpg" />
-    <Content Include="bin\Debug\Data\BookstoreDb.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\Debug\Data\Books\Aforismoi.jpg" />
     <Content Include="bin\Debug\Data\Books\Doctor Sleep.jpg" />
     <Content Include="bin\Debug\Data\Books\Manhunt.jpg" />
