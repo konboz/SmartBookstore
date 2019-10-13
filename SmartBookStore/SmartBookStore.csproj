@@ -285,6 +285,9 @@
     <Content Include="bin\Debug\Data\printingarea2.jpg" />
     <Content Include="bin\Debug\Data\radio.png" />
     <Content Include="bin\Debug\Data\searchIcon.jpg" />
+    <Content Include="bin\Debug\Data\SmartBookstoreDb.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\Debug\Data\start.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
