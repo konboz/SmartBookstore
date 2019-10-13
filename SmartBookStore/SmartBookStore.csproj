@@ -235,9 +235,6 @@
     <None Include="bin\Debug\cafe.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\radio.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="AcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
