@@ -297,5 +297,11 @@
   <ItemGroup>
     <None Include="bin\Debug\OrderProgress.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bookResults.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bookInfo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
