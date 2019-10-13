@@ -13,11 +13,11 @@ namespace SmartBookStore
     public partial class StartPageEmployee : Form
     {
         
-        Bitmap lightsOff = new Bitmap("emplbookstore2.jpg");
-        Bitmap lightsOn = new Bitmap("emplbookstore.jpg");
-        Bitmap lightsCafe = new Bitmap("emplbookstore3.jpeg");
-        Bitmap lightsBooks = new Bitmap("emplbookstore4.jpeg");
-        Bitmap lightsPrint = new Bitmap("emplbookstore5.jpeg"); 
+        Bitmap lightsOff = new Bitmap("Data/emplbookstore2.jpg");
+        Bitmap lightsOn = new Bitmap("Data/emplbookstore.jpg");
+        Bitmap lightsCafe = new Bitmap("Data/emplbookstore3.jpeg");
+        Bitmap lightsBooks = new Bitmap("Data/emplbookstore4.jpeg");
+        Bitmap lightsPrint = new Bitmap("Data/emplbookstore5.jpeg"); 
         public Form form;
         public StartPageEmployee(Form form)
         {

@@ -13,11 +13,11 @@ namespace SmartBookStore
 {
     public partial class Library : Form
     {
-        Bitmap lightsOut = new Bitmap("library-3.jpg");
-        Bitmap lightsOn = new Bitmap("library.jpg");
-        Bitmap lightsDown = new Bitmap("library-2.jpg");
+        Bitmap lightsOut = new Bitmap("Data/library-3.jpg");
+        Bitmap lightsOn = new Bitmap("Data/library.jpg");
+        Bitmap lightsDown = new Bitmap("Data/library-2.jpg");
         public Form form;
-        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookstoreDb.mdb";
+        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Data/BookstoreDb.mdb";
         OleDbConnection connection;
         public Library(Form form)
         {
