@@ -13,5 +13,6 @@ namespace SmartBookStore
         public decimal Price { get; set; }
         public string Paperback { get; set; }
         public int Year { get; set; }
+        public string Image { get; set; }
     }
 }

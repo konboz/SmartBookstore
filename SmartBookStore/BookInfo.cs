@@ -24,6 +24,7 @@ namespace SmartBookStore
             textBox3.Text = book.Year.ToString();
             textBox4.Text = book.Paperback;
             textBox5.Text = book.Price.ToString() + " $";
+            pictureBox1.ImageLocation = book.Image;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace SmartBookStore
         private void button3_Click(object sender, EventArgs e)
         {
             Utilities.BookAdd(book);
+            MessageBox.Show("Το προϊόν προστέθηκε στο καλάθι!");
         }
     }
 }

@@ -61,6 +61,7 @@ namespace SmartBookStore
                 book.Year = int.Parse(reader.GetValue(3).ToString());
                 book.Paperback = reader.GetValue(4).ToString();
                 book.Price = decimal.Parse(reader.GetValue(5).ToString());
+                book.Image = reader.GetValue(6).ToString();
                 results.Add(book);
             }
             reader.Close();
