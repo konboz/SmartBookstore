@@ -183,6 +183,16 @@ namespace SmartBookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OrderProgress {
+            get {
+                object obj = ResourceManager.GetObject("OrderProgress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap printingarea2 {
             get {
                 object obj = ResourceManager.GetObject("printingarea2", resourceCulture);
