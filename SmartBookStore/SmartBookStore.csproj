@@ -84,6 +84,12 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoffeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoffeOrder.Designer.cs">
+      <DependentUpon>CoffeOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,11 @@
     </Compile>
     <Compile Include="Library.Designer.cs">
       <DependentUpon>Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Radio.cs">
       <SubType>Form</SubType>
@@ -154,6 +165,9 @@
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CoffeOrder.resx">
+      <DependentUpon>CoffeOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,14 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Library.resx">
       <DependentUpon>Library.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\music.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\coffeOrder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\coffee.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
