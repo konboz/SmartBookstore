@@ -17,7 +17,7 @@ namespace SmartBookStore
         Bitmap lightsOn = new Bitmap("Data/library.jpg");
         Bitmap lightsDown = new Bitmap("Data/library-2.jpg");
         public Form form;
-        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Data/BookstoreDb.mdb";
+        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Data/SmartBookstoreDb.mdb";
         OleDbConnection connection;
         public Library(Form form)
         {
