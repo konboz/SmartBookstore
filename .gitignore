@@ -11,16 +11,21 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
-![Dd]ebug/Data/
+*.exe
+*.dll
+*.config
+[Dd]ebug/*.exe
+[Dd]ebug/*.dll
+[Dd]ebug/*.config
+[Bb]in/[Dd]ebug/*.exe
+[Bb]in/[Dd]ebug/*.dll
+[Bb]in/[Dd]ebug/*.config
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
 x64/
 x86/
 bld/
-[Bb]in/[Dd]ebug/Data/
-![Bb]in/
 [Oo]bj/
 [Ll]og/
 
