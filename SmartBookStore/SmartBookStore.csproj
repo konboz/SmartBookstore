@@ -134,6 +134,12 @@
     <Compile Include="Radio.Designer.cs">
       <DependentUpon>Radio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScanningArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanningArea.Designer.cs">
+      <DependentUpon>ScanningArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartpageClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Radio.resx">
       <DependentUpon>Radio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanningArea.resx">
+      <DependentUpon>ScanningArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartpageClient.resx">
       <DependentUpon>StartpageClient.cs</DependentUpon>

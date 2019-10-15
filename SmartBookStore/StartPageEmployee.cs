@@ -114,7 +114,9 @@ namespace SmartBookStore
             }
             else
             {
-                MessageBox.Show("Den einai etoimi h scanning area");
+                ScanningArea scan = new ScanningArea(this);
+                scan.Show();
+                Hide();
             }
         }
     }

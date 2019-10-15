@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace SmartBookStore
 {
-    public partial class Printingarea : Form
+    public partial class ScanningArea : Form
     {
         public Form form;
-        public Printingarea(Form form)
+        public ScanningArea(Form form)
         {
             InitializeComponent();
             this.form = form;
@@ -24,7 +23,7 @@ namespace SmartBookStore
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 axAcroPDF1.src = openFileDialog1.FileName;
             }
