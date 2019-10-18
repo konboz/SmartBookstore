@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 using System.Drawing.Printing;
 using Microsoft.VisualBasic;
 
@@ -47,9 +48,11 @@ namespace SmartBookStore
 
             PrintDocument printDocument = new PrintDocument();
 
-            printDialog.Document = printDocument;       
+            printDialog.Document = printDocument; //add the document to the dialog box...        
 
-            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt);
+            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
 
             DialogResult result = printDialog.ShowDialog();
 
