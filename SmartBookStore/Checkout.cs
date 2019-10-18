@@ -47,11 +47,9 @@ namespace SmartBookStore
 
             PrintDocument printDocument = new PrintDocument();
 
-            printDialog.Document = printDocument; //add the document to the dialog box...        
+            printDialog.Document = printDocument;       
 
-            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
-
-            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt);
 
             DialogResult result = printDialog.ShowDialog();
 
@@ -65,15 +63,13 @@ namespace SmartBookStore
         public void CreateReceipt(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
 
-            int total = 0;
             float cash = float.Parse(textBox3.Text.Substring(1, 5));
             float change = 0.00f;
 
-            //this prints the reciept
 
             Graphics graphic = e.Graphics;
 
-            Font font = new Font("Courier New", 12); //must use a mono spaced font as the spaces need to line up
+            Font font = new Font("Courier New", 12);
 
             float fontHeight = font.GetHeight();
 
@@ -84,21 +80,17 @@ namespace SmartBookStore
             graphic.DrawString(" Wangoland Coffee Shop", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
             string top = "Item Name".PadRight(30) + "Price";
             graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset = offset + (int)fontHeight; //make the spacing consistent
+            offset = offset + (int)fontHeight; 
             graphic.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset = offset + (int)fontHeight + 5; //make the spacing consistent
+            offset = offset + (int)fontHeight + 5;
 
             float totalprice = 0.00f;
 
             foreach (string item in listBox1.Items)
             {
-                //create the string to print on the reciept
                 string productDescription = item;
                 string productTotal = item.Substring(item.Length - 6, 6);
                 float productPrice = float.Parse(item.Substring(item.Length - 5, 5));
-
-                //MessageBox.Show(item.Substring(item.Length - 5, 5) + "PROD TOTAL: " + productTotal);
-
 
                 totalprice += productPrice;
 
@@ -108,7 +100,7 @@ namespace SmartBookStore
 
                     graphic.DrawString(productLine, new Font("Courier New", 12, FontStyle.Italic), new SolidBrush(Color.Red), startX, startY + offset);
 
-                    offset = offset + (int)fontHeight + 5; //make the spacing consistent
+                    offset = offset + (int)fontHeight + 5;
                 }
                 else
                 {
@@ -116,24 +108,21 @@ namespace SmartBookStore
 
                     graphic.DrawString(productLine, font, new SolidBrush(Color.Black), startX, startY + offset);
 
-                    offset = offset + (int)fontHeight + 5; //make the spacing consistent
+                    offset = offset + (int)fontHeight + 5;
                 }
 
             }
 
             change = (cash - totalprice);
-
-            //when we have drawn all of the items add the total
-
-            offset = offset + 20; //make some room so that the total stands out.
+            offset = offset + 20;
 
             graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
 
-            offset = offset + 30; //make some room so that the total stands out.
+            offset = offset + 30;
             graphic.DrawString("CASH ".PadRight(30) + String.Format("{0:c}", cash), font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
             graphic.DrawString("CHANGE ".PadRight(30) + String.Format("{0:c}", change), font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset = offset + 30; //make some room so that the total stands out.
+            offset = offset + 30;
             graphic.DrawString("     Thank-you for your custom,", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
             graphic.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
