@@ -119,6 +119,7 @@
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.button1);
             this.Name = "Printingarea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printingarea";
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);

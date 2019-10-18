@@ -189,6 +189,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "StartPageEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartPageEmployee";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -118,6 +118,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.axAcroPDF1);
             this.Name = "ScanningArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanningArea";
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
