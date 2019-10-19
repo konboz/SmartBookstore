@@ -38,6 +38,8 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +107,20 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "0%";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.Location = new System.Drawing.Point(9, 425);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(256, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Για Βοήθεια πατήστε το πλήκτρο F1";
+            // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "Help\\ektyp___.htm";
+            // 
             // Printingarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +128,7 @@
             this.BackgroundImage = global::SmartBookStore.Properties.Resources.printingarea2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button3);
@@ -119,6 +136,7 @@
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.button1);
             this.Name = "Printingarea";
+            this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printingarea";
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
@@ -137,5 +155,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

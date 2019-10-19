@@ -1142,10 +1142,10 @@ InputSync.prototype ={
 DR_EXPLAIN.namespace( 'DR_EXPLAIN.data_menu' );
 DR_EXPLAIN.data_menu = {
     // menu
-    DREX_NODE_NAMES: ["Βοήθεια","Ξεκινώντας","1. Γίνε ο Υπάλληλος","2. Γίνε ο Πελάτης","1.1. Εκτύπωση - Σάρωση","1.2. Διακόπτες φωτός","1.3. Λειτουργία ταμείου","2.1. Διακόπτες φωτός","2.2. Είσοδος στην βιβλιοθήκη","2.3. Είσοδος στην καφετέρια","1.1.1. Εκτύπωση","1.1.2. Σάρωση"],
-    DREX_NODE_LINKS: ["index.htm","_ekin_nta_.htm","_ine_o_ypall_lo_.htm","_ine_o_pelat__.htm","ektyp_______ar___.htm","1_2__diakopte____to_.htm","1_3__leitoyr_ia_tameioy.htm","2_1__diakopte____to_.htm","2_2__ei_odo___t_n_biblioo_k_.htm","2_3__ei_odo___t_n_ka_eteria.htm","1_1_1__ektyp___.htm","1_1_2___ar___.htm"],
-    DREX_NODE_CHILD_START: [1,4,4,7,10,12,12,12,12,12,12,12],
-    DREX_NODE_CHILD_END: [4,4,7,10,12,12,12,12,12,12,12,12],
+    DREX_NODE_NAMES: ["Βοήθεια","Ξεκινώντας","1. Γίνε ο Υπάλληλος","2. Γίνε ο Πελάτης","1.1. Εκτύπωση - Σάρωση","1.2. Διακόπτες φωτός","1.3. Λειτουργία ταμείου","2.1. Διακόπτες φωτός","2.2. Είσοδος στην βιβλιοθήκη","2.3. Είσοδος στην καφετέρια","Εκτύπωση","Σάρωση"," Περιοχή ταμείου","Βιβλιοθήκη","Ραδιόφωνο","Μενού"," Περιοχή ταμειακής μηχανής","Αναζήτηση","Στοιχεία","Καλάθι","Checkout"],
+    DREX_NODE_LINKS: ["index.htm","_ekin_nta_.htm","_ine_o_ypall_lo_.htm","_ine_o_pelat__.htm","ektyp_______ar___.htm","1_2__diakopte____to_.htm","1_3__leitoyr_ia_tameioy.htm","2_1__diakopte____to_.htm","2_2__ei_odo___t_n_biblioo_k_.htm","2_3__ei_odo___t_n_ka_eteria.htm","ektyp___.htm","_ar___.htm","_perio___tameioy.htm","biblioo_k_.htm","radio__no.htm","menoy.htm","_perio___tameiak___m__an__.htm","anaz_t___.htm","_toi_eia.htm","kalaoi.htm","checkout.htm"],
+    DREX_NODE_CHILD_START: [1,4,4,7,10,12,12,13,13,14,16,16,16,17,18,18,18,18,19,20,21],
+    DREX_NODE_CHILD_END: [4,4,7,10,12,12,13,13,14,16,16,16,17,18,18,18,18,19,20,21,21],
     DREX_MENU_TYPE: 2,
     DREX_HAS_ROOT_NODE: 0};
 
