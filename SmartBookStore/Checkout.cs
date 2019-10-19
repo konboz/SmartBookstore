@@ -22,46 +22,6 @@ namespace SmartBookStore
             this.form = form;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Add(textBox1.Text.PadRight(30) + textBox2.Text);
-            textBox1.Text = "";
-            textBox2.Text = "";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-            }
-            catch (Exception)
-            {
-
-                return;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            PrintDialog printDialog = new PrintDialog();
-
-            PrintDocument printDocument = new PrintDocument();
-
-            printDialog.Document = printDocument; //add the document to the dialog box...        
-
-            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
-
-            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
-
-            DialogResult result = printDialog.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                printDocument.Print();
-
-            }
-        }
 
         public void CreateReceipt(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -141,5 +101,46 @@ namespace SmartBookStore
         {
             form.Show();
             Hide();        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(textBox1.Text.PadRight(30) + textBox2.Text);
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            PrintDocument printDocument = new PrintDocument();
+
+            printDialog.Document = printDocument; //add the document to the dialog box...        
+
+            printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                printDocument.Print();
+
+            }
+        }
     }
 }

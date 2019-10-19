@@ -101,6 +101,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Προσθήκη προϊόντος";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -110,6 +111,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Αφαίρεση προϊόντος";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
@@ -119,6 +121,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Απόδειξη";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label3
             // 

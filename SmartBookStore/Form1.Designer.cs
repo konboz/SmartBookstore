@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -81,9 +82,20 @@
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\Χρήστος\\Documents\\ΠΜΣ Πληροφορική\\Β εξαμηνο\\Αλληλεπίδραση Ανθρώπου – Υπο" +
-    "λογιστή\\τελικη εργασια 2019\\SmartBookstore\\SmartBookStore\\bin\\Debug\\Data\\onlineh" +
-    "elp.html";
+            this.helpProvider1.HelpNamespace = "Help\\_ekin_nta_.htm";
+            // 
+            // button4
+            // 
+            this.helpProvider1.SetHelpKeyword(this.button4, "");
+            this.helpProvider1.SetHelpString(this.button4, "");
+            this.button4.Location = new System.Drawing.Point(12, 415);
+            this.button4.Name = "button4";
+            this.helpProvider1.SetShowHelp(this.button4, true);
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Βοήθεια";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -92,6 +104,7 @@
             this.BackgroundImage = global::SmartBookStore.Properties.Resources.start;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -113,6 +126,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -12,9 +12,13 @@ namespace SmartBookStore
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +40,20 @@ namespace SmartBookStore
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HelpProvider help = new HelpProvider();
+            help.SetShowHelp(button4, true);
+            help.HelpNamespace = "Help/_ekin_nta_.htm";
+        }
+
+        private void button4_MouseClick(object sender, MouseEventArgs e)
+        {
+            HelpProvider help = new HelpProvider();
+            help.SetShowHelp(button4, true);
+            help.HelpNamespace = "Help/_ekin_nta_.htm";
         }
     }
 }
