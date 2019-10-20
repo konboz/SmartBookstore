@@ -40,8 +40,8 @@ namespace SmartBookStore
             int startY = 10;
             int offset = 40;
 
-            graphic.DrawString(" Wangoland Coffee Shop", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
-            string top = "Item Name".PadRight(30) + "Price";
+            graphic.DrawString(" SmartBookstore Cafe", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            string top = "ΠΡΟΪΟΝ".PadRight(30) + "ΤΙΜΗ";
             graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight; 
             graphic.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
@@ -79,16 +79,16 @@ namespace SmartBookStore
             change = (cash - totalprice);
             offset = offset + 20;
 
-            graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("ΣΥΝΟΛΟ ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
 
             offset = offset + 30;
-            graphic.DrawString("CASH ".PadRight(30) + String.Format("{0:c}", cash), font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("ΜΕΤΡΗΤΑ ".PadRight(30) + String.Format("{0:c}", cash), font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
-            graphic.DrawString("CHANGE ".PadRight(30) + String.Format("{0:c}", change), font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("ΡΕΣΤΑ ".PadRight(30) + String.Format("{0:c}", change), font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 30;
-            graphic.DrawString("     Thank-you for your custom,", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("        ΕΥΧΑΡΙΣΤΟΥΜΕ ΓΙΑ ΤΗΝ ΠΡΟΤΙΜΗΣΗ ΣΑΣ!", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
-            graphic.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("     ΣΑΣ ΠΕΡΙΜΕΝΟΥΜΕ ΝΑ ΜΑΣ ΕΠΙΣΚΕΦΤΕΙΤΕ ΞΑΝΑ!", font, new SolidBrush(Color.Black), startX, startY + offset);
 
         }
 

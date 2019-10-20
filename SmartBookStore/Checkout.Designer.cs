@@ -130,13 +130,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(646, 364);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Σύνολο";
+            this.label3.Text = "Μετρητά";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(695, 361);
+            this.textBox3.Location = new System.Drawing.Point(704, 361);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(65, 20);
             this.textBox3.TabIndex = 9;
