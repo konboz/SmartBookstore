@@ -26,7 +26,7 @@ namespace SmartBookStore
         public void CreateReceipt(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
 
-            float cash = float.Parse(textBox3.Text.Substring(1, 5));
+            float cash = float.Parse(textBox3.Text);
             float change = 0.00f;
 
 
