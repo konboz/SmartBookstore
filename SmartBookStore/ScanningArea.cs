@@ -34,41 +34,48 @@ namespace SmartBookStore
             {
                 var deviceManager = new DeviceManager();
 
-                DeviceInfo AvailableScanner = null;
 
-                for (int i = 1; i <= deviceManager.DeviceInfos.Count; i++) // Loop Through the get List Of Devices.
+                DeviceInfo AvailableScanner = null;
+                if (deviceManager.DeviceInfos.Count == 0)
                 {
-                    if (deviceManager.DeviceInfos[i].Type != WiaDeviceType.ScannerDeviceType) // Skip device If it is not a scanner
+                    MessageBox.Show("Δεν υπάρχουν διαθέσιμοι σαρωτές!");
+                }
+                else
+                {
+                    for (int i = 1; i <= deviceManager.DeviceInfos.Count; i++) // Loop Through the get List Of Devices.
                     {
-                        continue;
+                        if (deviceManager.DeviceInfos[i].Type != WiaDeviceType.ScannerDeviceType) // Skip device If it is not a scanner
+                        {
+                            continue;
+                        }
+
+                        AvailableScanner = deviceManager.DeviceInfos[i];
+
+                        break;
                     }
 
-                    AvailableScanner = deviceManager.DeviceInfos[i];
+                    var device = AvailableScanner.Connect(); //Connect to the available scanner.
 
-                    break;
+                    var ScanerItem = device.Items[1]; // select the scanner.
+
+                    var imgFile = (ImageFile)ScanerItem.Transfer(FormatID.wiaFormatJPEG); //Retrive an image in Jpg format and store it into a variable.
+
+                    var Path = @"Scan\ScanImg.jpg"; // save the image in some path with filename.
+
+                    if (File.Exists(Path))
+                    {
+                        File.Delete(Path);
+                    }
+
+                    imgFile.SaveFile(Path);
+
+                    pictureBox1.ImageLocation = Path;
                 }
-
-                var device = AvailableScanner.Connect(); //Connect to the available scanner.
-
-                var ScanerItem = device.Items[1]; // select the scanner.
-
-                var imgFile = (ImageFile)ScanerItem.Transfer(FormatID.wiaFormatJPEG); //Retrive an image in Jpg format and store it into a variable.
-
-                var Path = @"Scan\ScanImg.jpg"; // save the image in some path with filename.
-
-                if (File.Exists(Path))
-                {
-                    File.Delete(Path);
-                }
-
-                imgFile.SaveFile(Path);
-
-                pictureBox1.ImageLocation = Path;
 
             }
-            catch (COMException ex)
+            catch (Exception exc)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(exc.Message);
             }
         }
 
