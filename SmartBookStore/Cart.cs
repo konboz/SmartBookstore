@@ -38,6 +38,7 @@ namespace SmartBookStore
             dataGridView1.DataSource = dt;
 
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.DefaultCellStyle.BackColor = Color.Red;
             deleteButtonColumn.Name = "Διαγραφή";
             deleteButtonColumn.Text = "Διαγραφή";
             int columnIndex = 3;
