@@ -29,11 +29,6 @@ namespace SmartBookStore
             axWindowsMediaPlayer1.URL = "http://media-ice.musicradio.com:80/ClassicFMMP3";
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             form.Show(this);
